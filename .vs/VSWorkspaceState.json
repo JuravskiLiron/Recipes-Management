@@ -3,8 +3,11 @@
     "",
     "\\Controllers",
     "\\Models",
+    "\\Properties",
     "\\Views",
-    "\\Views\\Home"
+    "\\Views\\Home",
+    "\\Views\\Shared"
   ],
+  "SelectedNode": "\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -139,3 +139,4 @@ D:\Users\User\source\repos\RecipesManagement\bin\Debug\net8.0\RecipesManagement.
 D:\Users\User\source\repos\RecipesManagement\bin\Debug\net8.0\RecipesManagement.pdb
 D:\Users\User\source\repos\RecipesManagement\obj\Debug\net8.0\RecipesManagement.genruntimeconfig.cache
 D:\Users\User\source\repos\RecipesManagement\obj\Debug\net8.0\ref\RecipesManagement.dll
+D:\Users\User\source\repos\RecipesManagement\obj\Debug\net8.0\RecipesManagement.sourcelink.json
