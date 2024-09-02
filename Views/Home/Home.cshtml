@@ -1,0 +1,134 @@
+﻿@model IEnumerable<RecipesManagement.Models.Recipe>
+@{
+    ViewData["Title"] = "Home";
+    var recipesPerPage = 9; // Количество рецептов на странице
+    var currentPage = ViewData["CurrentPage"] != null ? (int)ViewData["CurrentPage"] : 1;
+    var totalPages = ViewData["TotalPages"] != null ? (int)ViewData["TotalPages"] : 1;
+}
+
+<style>
+    .filter-container {
+        background-color: #ffffff;
+        border-radius: .375rem;
+        padding: 1.5rem;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+        margin-bottom: 1.5rem;
+    }
+    
+    .filter-container h5 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #495057;
+    }
+    
+    .filter-container .form-label {
+        font-weight: 600;
+        color: #495057;
+    }
+    
+    .filter-container .form-select,
+    .filter-container .form-control {
+        border-radius: .375rem;
+        border: 1px solid #ced4da;
+        box-shadow: none;
+        transition: border-color .3s, box-shadow .3s;
+    }
+    
+    .filter-container .form-select:focus,
+    .filter-container .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .25);
+    }
+    
+    .filter-container .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+    }
+    
+    .filter-container .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+    
+    .filter-container .btn-primary:focus,
+    .filter-container .btn-primary:active {
+        box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .25);
+    }
+        
+</style>
+
+<div class="filter-container">
+    <h5>Filter Recipes</h5>
+    <form class="row">
+        <div class="col-md-4 mb-2">
+            <label for="categoryFilter" class="form-label">Category</label>
+            <select id="categoryFilter" class="form-select">
+                <option value="">All</option>
+                <option value="Appetizers">Appetizers</option>
+                <option value="Main Courses">Main Courses</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Salads">Salads</option>
+                <option value="Soups">Soups</option>
+                <option value="Beverages">Beverages</option>
+            </select>
+        </div>
+        <div class="col-md-4 mb-2">
+            <label for="searchFilter" class="form-label">Search</label>
+            <input id="searchFilter" type="text" class="form-control" placeholder="Search by name">
+        </div>
+        <div class="col-md-4 d-flex align-items-end mb-2">
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <div class="text-center mb-4">
+        <a class="btn btn-outline-success btn-sm" asp-action="Create">Upload Recipe</a>
+    </div>
+    
+    <div class="row">
+        @foreach (var recipe in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%;">
+                    <img src="@recipe.RecipePhoto" class="card-img-top" alt="Recipe's photo">
+                    <div class="card-body">
+                        <h5 class="card-title">@recipe.RecipeName</h5>
+                        <p class="card-text">@recipe.RecipeCategory</p>
+                        <a href="#" class="btn btn-primary">Full recipe</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            @if (currentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="?page=@(currentPage - 1)" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            }
+            @for (var i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <a class="page-link" href="?page=@i">@i</a>
+                </li>
+            }
+            @if (currentPage < totalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="?page=@(currentPage + 1)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>

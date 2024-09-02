@@ -1,0 +1,85 @@
+@model RecipesManagement.Models.Recipe
+
+@{
+    ViewData["Title"] = "Upload New Post";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="row g-4 needs-validation" novalidate>
+        <!-- Recipe Name -->
+        <div class="col-md-6">
+            <label asp-for="RecipeName" class="form-label">Recipe's Name</label>
+            <input asp-for="RecipeName" type="text" class="form-control" placeholder="Napoleon, for example..." required />
+            <div class="invalid-feedback">
+                Please provide a recipe name.
+            </div>
+        </div>
+
+        <!-- Recipe Ingredients -->
+        <div class="col-md-6">
+            <label asp-for="RecipeIngredients" class="form-label">Recipe Ingredients and Cooking Steps</label>
+            <textarea asp-for="RecipeIngredients" class="form-control" rows="4" placeholder="For example...
+            1. 1 cup of sugar.
+            2. 1 cup of milk..." required></textarea>
+            <div class="invalid-feedback">
+                Please provide the recipe ingredients and cooking steps.
+            </div>
+        </div>
+
+        <!-- Recipe Category -->
+        <div class="col-md-6">
+            <label asp-for="RecipeCategory" class="form-label">Recipe Category</label>
+            <select asp-for="RecipeCategory" class="form-select" required>
+                <option value="" selected disabled>Choose...</option>
+                <option value="Appetizers">Appetizers</option>
+                <option value="Main Courses">Main Courses</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Salads">Salads</option>
+                <option value="Soups">Soups</option>
+                <option value="Beverages">Beverages</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a recipe category.
+            </div>
+        </div>
+
+        <!-- Recipe Photo URL -->
+        <div class="col-md-6">
+            <label for="recipePhoto" class="form-label">Recipe Photo URL</label>
+            <input type="text" id="recipePhoto" name="RecipePhoto" class="form-control" placeholder="Paste the URL of the photo here..." required />
+            <div class="invalid-feedback">
+                Please provide a recipe photo URL.
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Upload</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<script>
+    // Client-side validation
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
