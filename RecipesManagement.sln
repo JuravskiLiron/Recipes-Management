@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesManagement", "RecipesManagement.csproj", "{94499E6B-4298-4BF6-9257-72C27593F612}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +12,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94499E6B-4298-4BF6-9257-72C27593F612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94499E6B-4298-4BF6-9257-72C27593F612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94499E6B-4298-4BF6-9257-72C27593F612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94499E6B-4298-4BF6-9257-72C27593F612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
