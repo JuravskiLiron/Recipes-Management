@@ -3,10 +3,16 @@ using RecipesManagement.Models;
 
 public class ApplicationDbContext : DbContext
 {
+    public DbSet<Recipe> Recipes { get; set; }
+    
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
-        
     }
-    
-    public DbSet<Recipe> Recipes {get; set;}
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Recipe>().HasKey(x => x.Id);
+        base.OnModelCreating(modelBuilder);
+    }
+
 }

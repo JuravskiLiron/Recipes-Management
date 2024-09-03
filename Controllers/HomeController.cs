@@ -16,6 +16,7 @@ public class HomeController : Controller
         this.loger = logger;
     }
 
+    [HttpGet]
     public IActionResult Home(int page = 1)
     {
         var recipes = context.Recipes.ToList();
@@ -53,7 +54,7 @@ public class HomeController : Controller
             {
                 
             }
-    
+
             context.Recipes.Add(recipe);
             await context.SaveChangesAsync();
             
