@@ -1,6 +1,6 @@
 namespace RecipesManagement.Controllers;
 
-public class CategoriesController
+public class CategoriesController //: Controller
 {
     
 }

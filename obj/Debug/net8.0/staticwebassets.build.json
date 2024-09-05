@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aZHtNqGUmKfBGxpVJ7BShPQcRvhtn9H2ggV/JK49+nk=",
+  "Hash": "Y4MUtnaXejsW50cU1YUmvi6cv9NIoMabxj6kirGJH1A=",
   "Source": "RecipesManagement",
   "BasePath": "_content/RecipesManagement",
   "Mode": "Default",
@@ -53,6 +53,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Users\\User\\source\\repos\\RecipesManagement\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RecipesManagement.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\css\\HomeStyle.css",
+      "SourceId": "RecipesManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\",
+      "BasePath": "_content/RecipesManagement",
+      "RelativePath": "css/HomeStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\HomeStyle.css"
+    },
+    {
+      "Identity": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\css\\LayoutStyle.css",
+      "SourceId": "RecipesManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\",
+      "BasePath": "_content/RecipesManagement",
+      "RelativePath": "css/LayoutStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LayoutStyle.css"
     },
     {
       "Identity": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\css\\site.css",
@@ -1193,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\uploads\\ca24b3da-9326-404a-9d4f-cf3f27e82f07.jpeg",
+      "SourceId": "RecipesManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\",
+      "BasePath": "_content/RecipesManagement",
+      "RelativePath": "uploads/ca24b3da-9326-404a-9d4f-cf3f27e82f07.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ca24b3da-9326-404a-9d4f-cf3f27e82f07.jpeg"
     }
   ]
 }

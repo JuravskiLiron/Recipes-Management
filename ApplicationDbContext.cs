@@ -3,10 +3,9 @@ using RecipesManagement.Models;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<Recipe> Recipes { get; set; }
-    
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
+        
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -15,4 +14,5 @@ public class ApplicationDbContext : DbContext
         base.OnModelCreating(modelBuilder);
     }
 
+    public DbSet<Recipe> Recipes { get; set; }
 }

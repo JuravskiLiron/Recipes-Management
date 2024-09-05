@@ -22,7 +22,15 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="Views\css\" />
+    <Folder Include="Views\js\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\HomeStyle.css" />
+    <None Include="wwwroot\css\LayoutStyle.css" />
   </ItemGroup>
 
 </Project>

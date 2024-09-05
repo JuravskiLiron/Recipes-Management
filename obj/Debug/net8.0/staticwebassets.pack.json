@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\RecipesManagement.bundle.scp.css"
     },
     {
+      "Id": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\css\\HomeStyle.css",
+      "PackagePath": "staticwebassets\\css\\HomeStyle.css"
+    },
+    {
+      "Id": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\css\\LayoutStyle.css",
+      "PackagePath": "staticwebassets\\css\\LayoutStyle.css"
+    },
+    {
       "Id": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -243,6 +251,10 @@
     {
       "Id": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Users\\User\\source\\repos\\RecipesManagement\\wwwroot\\uploads\\ca24b3da-9326-404a-9d4f-cf3f27e82f07.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\ca24b3da-9326-404a-9d4f-cf3f27e82f07.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RecipesManagement.Microsoft.AspNetCore.StaticWebAssets.props",
